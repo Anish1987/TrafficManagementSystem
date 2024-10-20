@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c2366af8-d18c-4713-9fe3-b631be544fe7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>simulation.py</StartupFile>
+    <StartupFile>app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app.py" />
     <Compile Include="signal_time.py" />
     <Compile Include="simulation.py" />
     <Compile Include="vehicle_detection.py" />
@@ -32,12 +33,17 @@
     <Folder Include="images\right\" />
     <Folder Include="images\signals\" />
     <Folder Include="images\up\" />
+    <Folder Include="static\" />
+    <Folder Include="static\logo\" />
+    <Folder Include="templates\" />
+    <Folder Include="UI\" />
     <Folder Include="output_images\" />
     <Folder Include="test_images\" />
     <Folder Include="test_images\.vs\" />
     <Folder Include="test_images\.vs\test_images\" />
     <Folder Include="test_images\.vs\test_images\FileContentIndex\" />
     <Folder Include="test_images\.vs\test_images\v17\" />
+    <Folder Include="__pycache__\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="coco.names" />
@@ -69,7 +75,16 @@
     <Content Include="images\up\car.png" />
     <Content Include="images\up\rickshaw.png" />
     <Content Include="images\up\truck.png" />
+    <Content Include="output_images\output_1.jpg" />
+    <Content Include="output_images\output_2.jpg" />
+    <Content Include="output_images\output_3.jpg" />
+    <Content Include="output_images\output_4.jpg" />
     <Content Include="README.md" />
+    <Content Include="static\configureVehicles.jpg" />
+    <Content Include="static\logo\IntelliTrafficLogo.jpg" />
+    <Content Include="static\styles.css" />
+    <Content Include="templates\configureVehiclesForm.html" />
+    <Content Include="templates\home.html" />
     <Content Include="test_images\.vs\slnx.sqlite" />
     <Content Include="test_images\.vs\test_images\FileContentIndex\c5845da0-f4c1-44b6-9358-cb66c6d5e590.vsidx" />
     <Content Include="test_images\.vs\test_images\v17\.wsuo" />
@@ -81,6 +96,7 @@
     <Content Include="test_images\4.jpg" />
     <Content Include="yolov7.cfg" />
     <Content Include="yolov7.weights" />
+    <Content Include="__pycache__\vehicle_detection.cpython-313.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
