@@ -87,9 +87,7 @@ gap2 = 15   # moving gap
 
 pygame.init() #pygame.init() prepares all necessary modules for use.
 simulation = pygame.sprite.Group() #pygame.sprite.Group() is used to create a group of sprite objects. Sprites are objects that represent images or animations in your game, and grouping them allows you to manage them collectively.
-pygame.display.set_caption("Anish")
-icon = pygame.image.load('images/car1.png')
-pygame.display.set_icon(icon)
+
 class TrafficSignal:
     def __init__(self, red, yellow, green, minimum, maximum):
         self.red = red
@@ -446,8 +444,8 @@ class Main:
     white = (255, 255, 255)
 
     # Screensize 
-    screenWidth = 1300
-    screenHeight = 760
+    screenWidth = 1400
+    screenHeight = 800
     screenSize = (screenWidth, screenHeight)
 
     # Setting background image i.e. image of intersection

@@ -1,0 +1,31 @@
+﻿<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="header-text">IntelliTraffic</h1>
+    </div>
+    <div class="container">
+      <img class="logo" src="{{bgImage}}">
+      <div class="cards-area">
+        <a class="card" href="{{url_for('configureVehicles')}}">
+          <span>
+            <!-- <span class="card" onclick="redirectToconfigureVehicles()"> -->
+              <!-- <img style="height: 60px; width: 100px;" src="{{ url_for('static', filename='configureVehicles.jpg')}}"/> -->
+              <h1 style="color: rgb(12, 50, 84);">Configure Vehicles</h1>
+            </span>
+        </a>
+        <a class="card" href="{{url_for('runSimulationScript')}}">
+          <span>
+              <h1 style="color: rgb(12, 50, 84);">Simulation</h1>
+            </span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
