@@ -48,6 +48,7 @@
   <ItemGroup>
     <Content Include="coco.names" />
     <Content Include="Demo.gif" />
+    <Content Include="icon.png" />
     <Content Include="images\car1.png" />
     <Content Include="images\car2.jpg" />
     <Content Include="images\down\bike.png" />
@@ -55,6 +56,8 @@
     <Content Include="images\down\car.png" />
     <Content Include="images\down\rickshaw.png" />
     <Content Include="images\down\truck.png" />
+    <Content Include="images\IntelliTrafficLogo.jfif" />
+    <Content Include="images\IntelliTrafficLogo.png" />
     <Content Include="images\intersection.jpg" />
     <Content Include="images\left\bike.png" />
     <Content Include="images\left\bus.png" />
