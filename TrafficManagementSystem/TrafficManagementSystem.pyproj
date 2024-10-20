@@ -82,7 +82,6 @@
     <Content Include="output_images\output_2.jpg" />
     <Content Include="output_images\output_3.jpg" />
     <Content Include="output_images\output_4.jpg" />
-    <Content Include="README.md" />
     <Content Include="static\configureVehicles.jpg" />
     <Content Include="static\logo\IntelliTrafficLogo.jpg" />
     <Content Include="static\styles.css" />
