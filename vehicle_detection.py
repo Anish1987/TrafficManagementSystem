@@ -17,8 +17,23 @@ output_dir = "output_images/"
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
 
+def ResizeWithAspectRatio(image, width=None, height=None, inter=cv2.INTER_AREA):
+    dim = None
+    (h, w) = image.shape[:2]
+
+    if width is None and height is None:
+        return image
+    if width is None:
+        r = height / float(h)
+        dim = (int(w * r), height)
+    else:
+        r = width / float(w)
+        dim = (width, int(h * r))
+
+    return cv2.resize(image, dim, interpolation=inter)
+
 # Process each image
-for i in range(1, 5):  # Loop over images 1.jpg, 2.jpg, and 3.jpg
+for i in range(1, 7):  # Loop over images 1.jpg, 2.jpg, and 3.jpg
     # Load the image
     image_path = image_dir + str(i) + ".jpg"
     image = cv2.imread(image_path)
@@ -60,7 +75,8 @@ for i in range(1, 5):  # Loop over images 1.jpg, 2.jpg, and 3.jpg
                     cv2.putText(image, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 0), 2)
 
     # Display the image with detections
-    cv2.imshow("Vehicle Detection", image)
+    resize = ResizeWithAspectRatio(image, height=600) # Resize by width OR
+    cv2.imshow("Vehicle Detection", resize)
     cv2.waitKey(0)
 
     # Save the output image
@@ -69,3 +85,4 @@ for i in range(1, 5):  # Loop over images 1.jpg, 2.jpg, and 3.jpg
 
 # Destroy all windows after processing
 cv2.destroyAllWindows()
+

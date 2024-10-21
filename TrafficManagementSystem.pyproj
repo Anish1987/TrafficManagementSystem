@@ -78,14 +78,16 @@
     <Content Include="images\up\car.png" />
     <Content Include="images\up\rickshaw.png" />
     <Content Include="images\up\truck.png" />
+    <Content Include="LICENSE" />
     <Content Include="output_images\output_1.jpg" />
     <Content Include="output_images\output_2.jpg" />
     <Content Include="output_images\output_3.jpg" />
     <Content Include="output_images\output_4.jpg" />
+    <Content Include="README.md" />
     <Content Include="static\configureVehicles.jpg" />
     <Content Include="static\logo\IntelliTrafficLogo.jpg" />
     <Content Include="static\styles.css" />
-    <Content Include="templates\configureVehiclesForm.html" />
+    <Content Include="templates\faq.html" />
     <Content Include="templates\home.html" />
     <Content Include="test_images\.vs\slnx.sqlite" />
     <Content Include="test_images\.vs\test_images\FileContentIndex\c5845da0-f4c1-44b6-9358-cb66c6d5e590.vsidx" />
@@ -96,6 +98,8 @@
     <Content Include="test_images\2.jpg" />
     <Content Include="test_images\3.jpg" />
     <Content Include="test_images\4.jpg" />
+    <Content Include="test_images\5.jpg" />
+    <Content Include="test_images\6.jpg" />
     <Content Include="yolov7.cfg" />
     <Content Include="yolov7.weights" />
     <Content Include="__pycache__\vehicle_detection.cpython-313.pyc" />

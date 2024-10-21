@@ -1,0 +1,157 @@
+<html>
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <style>
+         .schema-faq-code {
+         border: 1px solid #dedee0;
+         border-radius: 10px;
+         background-color:#fefbf9;
+         overflow:hidden;
+         }
+         .schema-faq-code .faq-q {
+         font-size: 14px;
+         font-weight: bold;
+         margin: 0;
+         padding: 12px 56px 12px 12px;
+         line-height: 1.4;
+         cursor: pointer;
+         position: relative;
+         border-bottom: 1px solid #dedee0;
+         -webkit-touch-callout: none; 
+         -webkit-user-select: none;
+         -khtml-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none; 
+          font-family: sans-serif;
+         }
+         .faq-q:after {
+         content: "+";
+         position: absolute;
+         top: 50%;
+         right: 0;
+         width: 56px;
+         text-align: center;
+         -webkit-transform: translateY(-50%);
+         -moz-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%);
+         font-weight: bold;
+         color: #000;
+         font-size: 20px;
+         }
+         .faq-q.faq-q-open:after {
+         content: "-";	
+         }
+         .faq-a {
+         margin: 0;
+         padding: 12px;
+         background-color:#fff;
+         font-size: 14px;
+         line-height: 1.4;
+         border-bottom: 1px solid #dedee0;
+         display: none;
+        font-family: sans-serif;
+         }
+         .schema-faq-code .faq-question:last-child .faq-a {
+         border-bottom:0px;
+         }
+      </style>
+      <script type="text/javascript">
+
+          $(document).ready(function() {
+
+         jQuery('.faq-q').click(function(){
+         
+         if (jQuery(this).siblings().find('.faq-a').is(':visible')) {
+         jQuery(this).removeClass('faq-q-open');
+         jQuery(this).siblings().find('.faq-a').removeClass('faq-a-open').slideUp();
+         } 
+         else {
+         jQuery(this).addClass('faq-q-open');
+         jQuery(this).siblings().find('.faq-a').addClass('faq-a-open').slideDown();
+         }
+         })
+        });
+      </script>
+   </head>
+   <body>
+        <a class="card">
+     <span>
+         <h2 style="color: rgb(12, 50, 84); text-align: center">FAQ</h2>
+     </span>
+    </a>
+      <div class="schema-faq-code" itemscope="" itemtype="https://schema.org/FAQPage">
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">How fast is your AI model processing the data? What Library you have used for it?</h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">We have used YoloV7 library to object detection and benchmarking is available in the slide</p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">Do you have any statistics for image processing? </h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">Its available in benchmarking slide</p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">What if Camera is stopped working?</h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">System will wait for two seconds to get an input from AI model else will set the default time. </p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">Does your system consider weather effect? Generally, in monsoon traffic gets slow</h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">Currently its not in scope but in future yes. </p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">Do you know anywhere else the AI is being used in the Traffic Management System? </h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">Yes In USA , UK and Singapore its started and in India, Delhi, Mumbai and Hyderabad has started using it </p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">What are the alternatives to Yolo?  </h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">TensorFlow
+            Faster R-CNN (Region-based Convolutional Neural Network)
+            EfficientDet
+            RetinaNet
+            Mask R-CNN
+            CenterNet
+            DETR
+            Cascade R-CN
+         </p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">What if something else pops up on the road, like a large crowd gathering instead of vehicles.</h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">System will continue using the default timer if no vehicle counts detected above threshold</p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">Does your solution work in very dark and nighttime as well? because though the camera would be very high take but still for night vision, there is always challenge.  </h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">Yes, it could be challenge, so in future with the help of Infrared sensors our solution will effectively detect the heat emitted by vehicles. They are helpful in low-light or night-time conditions, improving system reliability and performance</p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">How are you training your data set models?</h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">Currently we are using YoloV7 with pretrained coco data set and we are planning to deploy our solutions as a pilot in a few of the selected cities and junctions, which will allow our models to get more trained and will allow us to deploy at more junctions</p>
+      </div>
+   </div>
+   <div itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-question">
+      <h3 itemprop="name" class="faq-q">How are you going to overcome resource challenges ? </h3>
+      <div itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+         <p itemprop="text" class="faq-a">Running object detection in real-world computer vision applications is hard. Key challenges include the allocation of computing resources, system robustness, scalability, efficiency, and latency. In addition, ML computer vision requires IoT communication (see AIoT) for data streaming with images as input and detections as output. 
+            So, to overcome this concept of Edge AI has been introduced, which leverages Edge Computing with Machine Learning (Edge ML, or Edge Intelligence). Edge AI modes ML processing from the cloud closer to the data source (camera). 
+         </p>
+      </div>
+   </div>
+</div>
+   </body>
+</html>

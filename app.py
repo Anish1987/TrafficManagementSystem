@@ -12,23 +12,23 @@ def home():
     full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'IntelliTrafficLogo.jpg')
     return render_template("home.html", bgImage = full_filename)
 
-def redirectToconfigureVehicles():
-    print('redirectToconfigureVehicles')
-    return redirect("/configureVehicles")
 
 @app.route('/configureVehicles')
 def configureVehicles():
-    return render_template("configureVehiclesForm.html")
+    result = subprocess.run(["python", "vehicle_detection.py"])
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'IntelliTrafficLogo.jpg')
+    return render_template("home.html", bgImage = full_filename)
 
 @app.route('/runSimulationScript')
 def runSimulationScript():
-    # return exec('simulation.py')
-    # return subprocess.call("simulation.py", shell=True)
-    result = subprocess.run(["python", "simulation.py"])
+    result = subprocess.Popen('python simulation.py')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'IntelliTrafficLogo.jpg')
+    return render_template("home.html", bgImage = full_filename)
 
-@app.route('/submit-vehicle-count', methods=['POST'])
-def submit_vehicle_count():
-    vehicles = request.form['vehicles']
+@app.route('/runFaq')
+def runFaq():
+    return render_template("faq.html")
+
 
 if __name__ == '__main__':
     app.run()
