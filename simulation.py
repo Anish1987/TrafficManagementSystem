@@ -411,7 +411,7 @@ class Main:
     background = pygame.image.load('images/mod_int.png')
 
     screen = pygame.display.set_mode(screenSize)
-    pygame.display.set_caption("SIMULATION")
+    pygame.display.set_caption("IntelliTraffic")
 
     # Loading signal images and font
     redSignal = pygame.image.load('images/signals/red.png')
