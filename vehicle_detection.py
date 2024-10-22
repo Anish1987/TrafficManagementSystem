@@ -33,7 +33,7 @@ def ResizeWithAspectRatio(image, width=None, height=None, inter=cv2.INTER_AREA):
     return cv2.resize(image, dim, interpolation=inter)
 
 # Process each image
-for i in range(1, 7):  # Loop over images 1.jpg, 2.jpg, and 3.jpg
+for i in range(1, 6):  # Loop over images 1.jpg, 2.jpg, and 3.jpg
     # Load the image
     image_path = image_dir + str(i) + ".jpg"
     image = cv2.imread(image_path)

@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="forecasting_new.py" />
     <Compile Include="signal_time.py" />
     <Compile Include="simulation.py" />
     <Compile Include="vehicle_detection.py" />
@@ -99,7 +100,7 @@
     <Content Include="test_images\3.jpg" />
     <Content Include="test_images\4.jpg" />
     <Content Include="test_images\5.jpg" />
-    <Content Include="test_images\6.jpg" />
+    <Content Include="traffic.csv" />
     <Content Include="yolov7.cfg" />
     <Content Include="yolov7.weights" />
     <Content Include="__pycache__\vehicle_detection.cpython-313.pyc" />
