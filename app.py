@@ -25,6 +25,12 @@ def runSimulationScript():
     full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'IntelliTrafficLogo.jpg')
     return render_template("home.html", bgImage = full_filename)
 
+@app.route('/runTrafficTrendScript')
+def runTrafficTrendScript():
+    result = subprocess.Popen('python forecasting_new.py')
+    full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'IntelliTrafficLogo.jpg')
+    return render_template("home.html", bgImage = full_filename)
+
 @app.route('/runFaq')
 def runFaq():
     return render_template("faq.html")
